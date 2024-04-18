@@ -1,0 +1,163 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: inquire_courses_offered
+  steps:
+  - intent: inquire_courses_offered
+  - action: action_provide_courses_offered
+
+- story: inquire_course_information
+  steps:
+  - intent: inquire_course_info
+  - action: action_provide_course_info
+
+- story: Greet and inquire about courses offered
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: inquire_courses_offered
+  - action: action_provide_courses_offered
+
+- story: Inquire about a specific course code
+  steps:
+  - intent: inquire_course_code
+  - action: action_provide_course_code
+
+- story: Inquire about course prerequisites
+  steps:
+  - intent: course_prerequisites
+  - action: action_provide_course_prerequisites
+
+- story: Inquire about course offered for a program
+  steps:
+  - intent: course_offered_for
+  - action: action_provide_course_offered_for
+
+- story: Inquire about course structure
+  steps:
+  - intent: course_credit
+  - action: action_provide_course_structure
+
+- story: Inquire about course type
+  steps:
+  - intent: course_type
+  - action: action_provide_course_type
+
+- story: Inquire about course professors
+  steps:
+  - intent: inquire_course_professors
+  - action: action_provide_course_professors
+
+- story: Inquire about a specific professor
+  steps:
+  - intent: inquire_about_professor
+  - action: action_provide_professor_info
+
+- story: Inquire about professor education
+  steps:
+  - intent: inquire_professor_education
+  - action: action_provide_professor_education
+
+- story: Inquire about professor research area
+  steps:
+  - intent: inquire_professor_research_area
+  - action: action_provide_professor_research_area
+
+- story: Inquire about programs offered
+  steps:
+  - intent: programs
+  - action: action_provide_programs
+
+- story: Inquire about department information
+  steps:
+  - intent: department_info
+  - action: action_provide_department_info
+
+- story: Inquire about ongoing projects
+  steps:
+  - intent: ongoing_projects
+  - action: action_provide_ongoing_projects
+
+- story: inquire_course_details
+  steps:
+  - intent: inquire_course_code
+  - action: action_provide_course_code
+  - intent: course_prerequisites
+  - action: action_provide_course_prerequisites
+  - intent: course_offered_for
+  - action: action_provide_course_offered_for
+  - intent: course_credit
+  - action: action_provide_course_structure
+  - intent: course_type
+  - action: action_provide_course_type
+
+- story: inquire_course_professors
+  steps:
+  - intent: inquire_course_professors
+  - action: action_provide_course_professors
+
+- story: inquire_professor_details
+  steps:
+  - intent: inquire_about_professor
+  - action: action_provide_professor_info
+  - intent: inquire_professor_education
+  - action: action_provide_professor_education
+  - intent: inquire_professor_research_area
+  - action: action_provide_professor_research_area
+
+- story: inquire_programs_and_department_info
+  steps:
+  - intent: programs
+  - action: action_provide_programs
+  - intent: department_info
+  - action: action_provide_department_info
+
+- story: Fallback
+  steps:
+  - intent: fallback
+  - action: utter_default
+
+- story: Out of Scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- story: Apologize and Offer Help
+  steps:
+  - intent: fallback
+  - action: utter_apology
+  - action: utter_help
+
+- story: Fallback and Goodbye
+  steps:
+  - intent: fallback
+  - action: utter_default
+  - action: utter_goodbye

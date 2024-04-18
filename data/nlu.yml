@@ -1,0 +1,1636 @@
+version: "3.1"
+
+nlu:
+- intent: fallback
+  examples: |
+    - I'm sorry, I didn't understand that.
+    - Could you please repeat that?
+    - I didn't get what you said.
+    - Can you rephrase that?
+    - I'm not sure what you're asking.
+    - Sorry, I can't understand.
+    - I didn't catch that.
+    - What do you mean?
+    - Can you clarify?
+    - I'm lost, can you help?
+    - I'm confused, can you explain again?
+    - I'm not sure what to do next.
+    - This doesn't make sense to me.
+    - Can you provide more information?
+    - I'm having trouble following.
+    - It's not clear to me.
+
+- intent: out_of_scope
+  examples: |
+    - What's the meaning of life?
+    - Tell me a joke.
+    - Can you help me with my personal problems?
+    - What's the weather like in Tokyo?
+    - I need advice on buying a car.
+    - Can you give me stock market tips?
+    - How do I fix my computer?
+    - What's your favorite movie?
+    - Who will win the next election?
+    - What's the best restaurant in town?
+    - Can you recommend a good book?
+    - How can I lose weight quickly?
+    - What's the capital of France?
+    - Can you help me find a job?
+    - What's the latest fashion trend?
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: inquire_courses_offered
+  examples: |
+    - What courses does the [computer science](department) department offer?
+    - Can you tell me about the courses offered in [computer science](department)?
+    - What are the available [computer science](department) courses?
+    - Which courses can I take as a [computer science](department) major?
+    - List the courses provided by the [computer science](department) department.
+    - Tell me the courses available in the [computer science](department) program.
+    - What subjects are covered in the [computer science](department) department's curriculum?
+    - Provide information on the courses offered for [computer science](department) students.
+    - Which specific courses are part of the [computer science](department) department's curriculum?
+    - What are the course options for students in the [computer science](department) program?
+    - Please give me an overview of the courses offered by the [computer science](department) department.
+    - I'm interested in knowing the course offerings for the [computer science](department) department.
+    - Can you give me a list of courses available for [computer science](department) students?
+    - What majors or minors are offered within the [computer science](department) department?
+    - Could you provide details about the curriculum and courses in the [computer science](department) department?
+
+
+    - information about the course [ppl 1](course)
+    - Can you provide information about the course [deep learning](course)?
+    - What can you tell me about the [deep learning](course) course?
+    - I'm interested in learning more about the [deep learning](course) course.
+    - Give me an overview of the [deep learning](course) course.
+    - What topics are covered in the [deep learning](course) course?
+    - Explain the curriculum for the [deep learning](course) course.
+    - Tell me about the prerequisites for the [deep learning](course) course.
+    - I want to know about the instructors teaching the [deep learning](course) course.
+    - What are the learning outcomes of the [deep learning](course) course?
+    - Can you provide any resources or materials for the [deep learning](course) course?
+    - Is the [deep learning](course) course available online or in-person?
+    - What is the duration of the [deep learning](course) course?
+    - Are there any assignments or projects in the [deep learning](course) course?
+    - Can you tell me about the course structure for [deep learning](course)?
+    - Provide me with details about the [deep learning](course) course.
+    
+
+- intent: inquire_course_code
+  examples: |
+    - What is the course code for [Introduction to Computer Science](course)?
+    - What is the course code for [deep learning](course)?
+    - What is the course code for [machine learning](course)?
+
+    - What is the course code for [artificial intelligence](course)?
+
+    - What is the course code for [database management system](course)?
+    - What is the course code for [database systems](course)?
+    - What is the course code for [Introduction to Computer Science](course)?
+    - What is the course code for [Data Structures and Algorithms](course)?
+    - What is the course code for [Design and Analysis of Algorithms](course)?
+    - What is the course code for [Human-Machine Interaction](course)?
+    - What is the course code for [Maths for Computing](course)?
+    - What is the course code for [Pattern Recognition and Machine Learning](course)?
+    - What is the course code for [Principles of Computer Systems - I](course)?
+    - What is the course code for [Software Engineering](course)?
+    - What is the course code for [Computer Architecture](course)?
+    - What is the course code for [Computer Networks](course)?
+    - What is the course code for [Data Engineering](course)?
+    - What is the course code for [Operating Systems](course)?
+    - What is the course code for [Data Visualization (400)](course)?
+    - What is the course code for [Distributed Systems](course)?
+    - What is the course code for [DL-Ops](course)?
+    - What is the course code for [Software and Data Engineering](course)?
+    - What is the course code for [Advanced Artificial Intelligence](course)?
+    - What is the course code for [Advanced Biometrics](course)?
+    - What is the course code for [Principles of Computer Systems - II](course)?
+    - What is the course code for [Principles of Programming Languages](course)?
+    - What is the course code for [Optimization in ML](course)?
+    - What is the course code for [Visual Computing Lab](course)?
+    - What is the course code for [Advanced Data Structure and Algorithms](course)?
+    - What is the course code for [Dependable AI](course)?
+    - What is the course code for [ML-Ops](course)?
+    - What is the course code for [Advanced Machine Learning](course)?
+    - What is the course code for [Autonomous Systems](course)?
+    - What is the course code for [Bio-image Computing](course)?
+    - What is the course code for [Complexity Theory](course)?
+    - What is the course code for [Computer Graphics](course)?
+    - What is the course code for [Computer Vision](course)?
+    - What is the course code for [Cryptography](course)?
+    - What is the course code for [Distributed Database Systems](course)?
+    - What is the course code for [Edge and Fog Computing](course)?
+    - What is the course code for [Embedded Systems](course)?
+    - What is the course code for [Ethics, Policy, Law and Regulations in AI](course)?
+    - What is the course code for [Fundamentals of Machine Learning](course)?
+    - What is the course code for [Graph-theoretic Algorithms](course)?
+    - What is the course code for [Hardware Software Co-design](course)?
+    - What is the course code for [Introduction to AR and VR](course)?
+    - What is the course code for [Introduction to Blockchain](course)?
+    - What is the course code for [Medical Image Analysis](course)?
+    - What is the course code for [Mobile and Pervasive Computing](course)?
+    - What is the course code for [Natural Language Understanding](course)?
+    - What is the course code for [Parameterized Complexity](course)?
+    - What is the course code for [Principles of Biological Vision and Applications](course)?
+    - What is the course code for [Security and Its Applications](course)?
+    - What is the course code for [Software Testing and Quality Assurance](course)?
+    - What is the course code for [Virtualization and Cloud Computing](course)?
+    - What is the course code for [Selected Topics in Artificial Intelligence - I](course)?
+    - What is the course code for [ICS](course)?
+    - Can you provide me with the course code for [Artificial Intelligence](course)?
+    - Can you provide me with the course code for [AI](course)?
+    - What is the course code for [Database Systems](course)?
+   
+    - Do you have the course code for [Computer Networks](course)?
+    - Please give me the course code for [Operating Systems](course).
+    - Please give me the course code for [OS](course).
+    - What is the code for the course [Data Structures and Algorithms](course)?
+    - What is the code for the course [Dsa](course)?
+    - Can you tell me the course code for [cyber security](course)?
+    - I need the course code for [Os](course).
+    - What code is assigned to the course [ML](course)?
+    - Give me the course code for [Machine Learning](course).
+    - Can you provide the code for the course [Network Security](course)?
+    - Tell me the code for the course [Human-Computer Interaction](course).
+    - Please provide me with the course code for [Data Mining](course).
+    - What code should I use for the course [Computer Graphics](course)?
+    - Do you know the course code for [Parallel Computing](course)?
+
+  # entities:
+  #     - course: deep learning
+  #     - course: machine learning
+  #     - course: AI and deep learning
+  #     - course: Dependable AI
+  #     - course: DL-Ops
+  #     - course: Software and Data Engineering
+  #     - course: ML-Ops
+  #     - course: Advanced Artificial Intelligence
+  #     - course: Advanced Machine Learning
+  #     - course: Autonomous Systems
+  #     - course: Bio-image Computing
+  #     - course: Complexity Theory
+      
+
+- intent: course_prerequisites
+  examples: |
+    - What are the prerequisites for [Introduction to Computer Science](course)?
+    - What are the prerequisites for [Artificial Intelligence](course)?
+
+    - What are the prerequisites for [Database Management System](course)?
+    - What are the prerequisites for [Database Systems](course)?
+    - What are the prerequisites for [Introduction to Computer Science](course)?
+    - What are the prerequisites for [Data Structures and Algorithms](course)?
+    - What are the prerequisites for [Design and Analysis of Algorithms](course)?
+    - What are the prerequisites for [Human-Machine Interaction](course)?
+    - What are the prerequisites for [Maths for Computing](course)?
+    - What are the prerequisites for [Pattern Recognition and Machine Learning](course)?
+    - What are the prerequisites for [Principles of Computer Systems - I](course)?
+    - What are the prerequisites for [Software Engineering](course)?
+    - What are the prerequisites for [Computer Architecture](course)?
+    - What are the prerequisites for [Computer Networks](course)?
+    - What are the prerequisites for [Data Engineering](course)?
+    - What are the prerequisites for [Operating Systems](course)?
+    - What are the prerequisites for [Data Visualization (400)](course)?
+    - What are the prerequisites for [Distributed Systems](course)?
+    - What are the prerequisites for [DL-Ops](course)?
+    - What are the prerequisites for [Software and Data Engineering](course)?
+    - What are the prerequisites for [Advanced Artificial Intelligence](course)?
+    - What are the prerequisites for [Advanced Biometrics](course)?
+    - What are the prerequisites for [Principles of Computer Systems - II](course)?
+    - What are the prerequisites for [Principles of Programming Languages](course)?
+    - What are the prerequisites for [Optimization in ML](course)?
+    - What are the prerequisites for [Visual Computing Lab](course)?
+    - What are the prerequisites for [Advanced Data Structure and Algorithms](course)?
+    - What are the prerequisites for [Dependable AI](course)?
+    - What are the prerequisites for [ML-Ops](course)?
+    - What are the prerequisites for [Advanced Machine Learning](course)?
+    - What are the prerequisites for [Autonomous Systems](course)?
+    - What are the prerequisites for [Bio-image Computing](course)?
+    - What are the prerequisites for [Complexity Theory](course)?
+    - What are the prerequisites for [Computer Graphics](course)?
+    - What are the prerequisites for [Computer Vision](course)?
+    - What are the prerequisites for [Cryptography](course)?
+    - What are the prerequisites for [Distributed Database Systems](course)?
+    - What are the prerequisites for [Edge and Fog Computing](course)?
+    - What are the prerequisites for [Embedded Systems](course)?
+    - What are the prerequisites for [Ethics, Policy, Law and Regulations in AI](course)?
+    - What are the prerequisites for [Fundamentals of Machine Learning](course)?
+    - What are the prerequisites for [Graph-theoretic Algorithms](course)?
+    - What are the prerequisites for [Hardware Software Co-design](course)?
+    - What are the prerequisites for [Introduction to AR and VR](course)?
+    - What are the prerequisites for [Introduction to Blockchain](course)?
+    - What are the prerequisites for [Medical Image Analysis](course)?
+    - What are the prerequisites for [Mobile and Pervasive Computing](course)?
+    - What are the prerequisites for [Natural Language Understanding](course)?
+    - What are the prerequisites for [Parameterized Complexity](course)?
+    - What are the prerequisites for [Principles of Biological Vision and Applications](course)?
+    - What are the prerequisites for [Security and Its Applications](course)?
+    - What are the prerequisites for [Software Testing and Quality Assurance](course)?
+    - What are the prerequisites for [Virtualization and Cloud Computing](course)?
+    - What are the prerequisites for [Selected Topics in Artificial Intelligence - I](course)?
+    - Are there any requirements for enrolling in [Artificial Intelligence](course)?
+    - Can you provide the prerequisites for [Database Systems](course)?
+    - What do I need to take before [Computer Networks](course)?
+    - Tell me the prerequisites for [Operating Systems](course).
+    - Are there any preconditions for [Data Structures and Algorithms](course)?
+    - What courses should I complete prior to [ML](course)
+    - Can you give me the prerequisites for [OS](course)?
+    - What are the requirements for [Computer Architecture](course)?
+    - Tell me what I need to take before [Machine Learning](course).
+    - What prerequisites are there for [Network Security](course)?
+    - Can you provide the required courses for [AI](course)?
+    - What do I need to study before taking [Human-Computer Interaction](course)?
+    - What are the prerequisites for [dsa](course)?
+    - Are there any requirements for [Computer Graphics](course)?
+    - Can you tell me the prerequisites for [Parallel Computing](course)?
+
+- intent: course_offered_for
+  examples: |
+    
+    - Can you tell me for which degrees is [Artificial Intelligence](course) offered in the Computer Science department?
+    - What are the available study programs for [Database Systems](course) in the Computer Science department?
+    - Which programs is [Artificial Intelligence](course) offered for in the Computer Science department?
+    - Which programs is [DBMS](course) offered for in the Computer Science department?
+    - Which programs is [Database Management System](course) offered for in the Computer Science department?
+    - Which programs is [Database Systems](course) offered for in the Computer Science department?
+    - Which programs is [Introduction to Computer Science](course) offered for in the Computer Science department?
+    - Which programs is [Data Structures and Algorithms](course) offered for in the Computer Science department?
+    - Which programs is [Design and Analysis of Algorithms](course) offered for in the Computer Science department?
+    - Which programs is [Human-Machine Interaction](course) offered for in the Computer Science department?
+    - Which programs is [Maths for Computing](course) offered for in the Computer Science department?
+    - Which programs is [Pattern Recognition and Machine Learning](course) offered for in the Computer Science department?
+    - Which programs is [Principles of Computer Systems - I](course) offered for in the Computer Science department?
+    - Which programs is [Software Engineering](course) offered for in the Computer Science department?
+    - Which programs is [Computer Architecture](course) offered for in the Computer Science department?
+    - Which programs is [Computer Networks](course) offered for in the Computer Science department?
+    - Which programs is [Data Engineering](course) offered for in the Computer Science department?
+    - Which programs is [Operating Systems](course) offered for in the Computer Science department?
+    - Which programs is [Data Visualization (400)](course) offered for in the Computer Science department?
+    - Which programs is [Distributed Systems](course) offered for in the Computer Science department?
+    - Which programs is [DL-Ops](course) offered for in the Computer Science department?
+    - Which programs is [Software and Data Engineering](course) offered for in the Computer Science department?
+    - Which programs is [Advanced Artificial Intelligence](course) offered for in the Computer Science department?
+    - Which programs is [Advanced Biometrics](course) offered for in the Computer Science department?
+    - Which programs is [Principles of Computer Systems - II](course) offered for in the Computer Science department?
+    - Which programs is [Principles of Programming Languages](course) offered for in the Computer Science department?
+    - Which programs is [Optimization in ML](course) offered for in the Computer Science department?
+    - Which programs is [Visual Computing Lab](course) offered for in the Computer Science department?
+    - Which programs is [Advanced Data Structure and Algorithms](course) offered for in the Computer Science department?
+    - Which programs is [Dependable AI](course) offered for in the Computer Science department?
+    - Which programs is [ML-Ops](course) offered for in the Computer Science department?
+    - Which programs is [Advanced Machine Learning](course) offered for in the Computer Science department?
+    - Which programs is [Autonomous Systems](course) offered for in the Computer Science department?
+    - Which programs is [Bio-image Computing](course) offered for in the Computer Science department?
+    - Which programs is [Complexity Theory](course) offered for in the Computer Science department?
+    - Which programs is [Computer Graphics](course) offered for in the Computer Science department?
+    - Which programs is [Computer Vision](course) offered for in the Computer Science department?
+    - Which programs is [Cryptography](course) offered for in the Computer Science department?
+    - Which programs is [Distributed Database Systems](course) offered for in the Computer Science department?
+    - Which programs is [Edge and Fog Computing](course) offered for in the Computer Science department?
+    - Which programs is [Embedded Systems](course) offered for in the Computer Science department?
+    - Which programs is [Ethics, Policy, Law and Regulations in AI](course) offered for in the Computer Science department?
+    - Which programs is [Fundamentals of Machine Learning](course) offered for in the Computer Science department?
+    - Which programs is [Graph-theoretic Algorithms](course) offered for in the Computer Science department?
+    - Which programs is [Hardware Software Co-design](course) offered for in the Computer Science department?
+    - Which programs is [Introduction to AR and VR](course) offered for in the Computer Science department?
+    - Which programs is [Introduction to Blockchain](course) offered for in the Computer Science department?
+    - Which programs is [Medical Image Analysis](course) offered for in the Computer Science department?
+    - Which programs is [Mobile and Pervasive Computing](course) offered for in the Computer Science department?
+    - Which programs is [Natural Language Understanding](course) offered for in the Computer Science department?
+    - Which programs is [Parameterized Complexity](course) offered for in the Computer Science department?
+    - Which programs is [Principles of Biological Vision and Applications](course) offered for in the Computer Science department?
+    - Which programs is [Security and Its Applications](course) offered for in the Computer Science department?
+    - Which programs is [Software Testing and Quality Assurance](course) offered for in the Computer Science department?
+    - Which programs is [Virtualization and Cloud Computing](course) offered for in the Computer Science department?
+    - Which programs is [Selected Topics in Artificial Intelligence - I](course) offered for in the Computer Science department?
+    - Is [Computer Networks](course) offered for all majors in the Computer Science department?
+    - Which degree programs in the Computer Science department include [Machine Learning](course)?
+    - Can you provide information about the study programs in the Computer Science department that offer [Data Analytics](course)?
+    - What majors in the Computer Science department is [Software Engineering](course) available for?
+    - Is [Computer Graphics](course) offered to both undergraduate and graduate students in the Computer Science department?
+    - Which study programs in the Computer Science department can students take [Algorithms](course) as a requirement?
+    - Can you tell me for which degrees in the Computer Science department [Computer Vision](course) is available?
+    - What are the available majors in the Computer Science department for students interested in [Artificial Neural Networks](course)?
+    - Is [Operating Systems](course) offered as part of the Computer Science program in the Computer Science department?
+    - Which programs in the Computer Science department offer [Data Mining](course) as a specialization?
+    - Can you provide information about the study programs in the Computer Science department that include [Computer Security](course)?
+    - What degrees in the Computer Science department is [Software Testing](course) a mandatory course for?
+
+- intent: course_credit
+  examples: |
+    - How many credits is [Introduction to Computer Science](course) worth?
+    - What is the credit value for [Data Structures and Algorithms](course)?
+    - How many credits do I get for taking [Design and Analysis of Algorithms](course)?
+    - What is the credit allocation for [Software Engineering](course)?
+    - How many credits does [Computer Architecture](course) carry?
+    - What is the credit weightage for [Artificial Intelligence](course)?
+    - How many credits is [Operating Systems](course) worth?
+    - What is the credit value for [Database Management System](course)?
+    - How many credits do I get for [Machine Learning](course)?
+    - What is the credit allocation for [Distributed Systems](course)?
+    - How many credits does [Advanced Artificial Intelligence](course) carry?
+    - What is the credit weightage for [Computer Networks](course)?
+    - How many credits is [Natural Language Understanding](course) worth?
+    - What is the credit value for [Computer Graphics](course)?
+    - How many credits do I get for taking [Mobile and Pervasive Computing](course)?
+    - What is the credit allocation for [Selected Topics in Artificial Intelligence - I](course)?
+    - How many credits does [Software Testing and Quality Assurance](course) carry?
+    - What is the credit weightage for [Medical Image Analysis](course)?
+    - How many credits is [Ethics, Policy, Law and Regulations in AI](course) worth?
+    - What is the credit value for [Introduction to Blockchain](course)?
+    - How many credits do I get for [Parameterized Complexity](course)?
+    - What is the credit allocation for [Computer Vision](course)?
+    - How many credits does [Principles of Biological Vision and Applications](course) carry?
+    - What is the credit weightage for [Security and Its Applications](course)?
+    - How many credits is [Fundamentals of Machine Learning](course) worth?
+    - What is the credit value for [Graph-theoretic Algorithms](course)?
+    - How many credits do I get for taking [Hardware Software Co-design](course)?
+    - What is the credit allocation for [Introduction to AR and VR](course)?
+    - How many credits does [Edge and Fog Computing](course) carry?
+    - What is the credit weightage for [Distributed Database Systems](course)?
+    - How many credits is [Complexity Theory](course) worth?
+    - What is the credit value for [Bio-image Computing](course)?
+    - How many credits do I get for [Autonomous Systems](course)?
+    - What is the credit allocation for [Advanced Machine Learning](course)?
+    - How many credits does [ML-Ops](course) carry?
+    - What is the credit weightage for [Dependable AI](course)?
+    - How many credits is [Computer Architecture](course) worth?
+    - What is the credit value for [Advanced Data Structure and Algorithms](course)?
+    - How many credits do I get for taking [Visual Computing Lab](course)?
+    - What is the credit allocation for [Optimization in ML](course)?
+    - How many credits does [Data Visualization (400)](course) carry?
+    - What is the credit weightage for [Distributed Systems](course)?
+    - How many credits is [Data Engineering](course) worth?
+    - What is the credit value for [Computer Networks](course)?
+    - How many credits do I get for [Database Systems](course)?
+    - What is the credit allocation for [Database Management System](course)?
+    - How many credits does [AI](course) carry?
+    - What is the credit weightage for [Artificial Intelligence](course)?
+    - How many credits is [Machine Learning](course) worth?
+    - What is the credit value for [Deep Learning](course)?
+    - How many credits do I get for taking [Introduction to Computer Science](course)?
+    - What is the credit allocation for [Pattern Recognition and Machine Learning](course)?
+    - How many credits does [Maths for Computing](course) carry?
+    - What is the credit weightage for [Human-Machine Interaction](course)?
+    - How many credits is [Design and Analysis of Algorithms](course) worth?
+    - What is the credit value for [Data Structures and Algorithms](course)?
+    - How many credits do I get for taking [Introduction to Computer Science](course)?
+    - What is the credit allocation for [Database Systems](course)?
+    - How many credits does [Database Management System](course) carry?
+    - What is the credit weightage for [AI](course)?
+    - How many credits is [Artificial Intelligence](course) worth?
+   
+    - What are the credit hours for [Artificial Intelligence](course)?
+    - How many credits are assigned to [Database Systems](course)?
+    - Can you tell me the credit value for [Computer Networks](course)?
+    - What is the credit allocation for [Software Engineering](course)?
+    - How many credit hours does [Data Structures](course) have?
+    - Can you provide the credit value for [Operating Systems](course)?
+    - What is the credit weight of [Algorithms](course)?
+    - How many credits does [Computer Architecture](course) carry?
+    - Can you tell me the credit hours for [Machine Learning](course)?
+    - What are the credits assigned to [Web Development](course)?
+    - How many credit points does [Database Management](course) have?
+    - Can you provide the credit value for [Network Security](course)?
+    - What is the credit allocation for [Computer Graphics](course)?
+    - How many credits is [Parallel Computing](course) worth?
+
+- intent: course_type
+  examples: |
+    - Is [Introduction to Computer Science](course) a mandatory course?
+    - Is [Artificial Intelligence](course) an elective course?
+
+    - Is [Database Management System](course) an elective course?
+    - Is [Database Systems](course) an elective course?
+    - Is [Introduction to Computer Science](course) an elective course?
+    - Is [Data Structures and Algorithms](course) an elective course?
+    - Is [Design and Analysis of Algorithms](course) an elective course?
+    - Is [Human-Machine Interaction](course) an elective course?
+    - Is [Maths for Computing](course) an elective course?
+    - Is [Pattern Recognition and Machine Learning](course) an elective course?
+    - Is [Principles of Computer Systems - I](course) an elective course?
+    - Is [Software Engineering](course) an elective course?
+    - Is [Computer Architecture](course) an elective course?
+    - Is [Computer Networks](course) an elective course?
+    - Is [Data Engineering](course) an elective course?
+    - Is [Operating Systems](course) an elective course?
+    - Is [Data Visualization (400)](course) an elective course?
+    - Is [Distributed Systems](course) an elective course?
+    - Is [DL-Ops](course) an elective course?
+    - Is [Software and Data Engineering](course) an elective course?
+    - Is [Advanced Artificial Intelligence](course) an elective course?
+    - Is [Advanced Biometrics](course) an elective course?
+    - Is [Principles of Computer Systems - II](course) an elective course?
+    - Is [Principles of Programming Languages](course) an elective course?
+    - Is [Optimization in ML](course) an elective course?
+    - Is [Visual Computing Lab](course) an elective course?
+    - Is [Advanced Data Structure and Algorithms](course) an elective course?
+    - Is [Dependable AI](course) an elective course?
+    - Is [ML-Ops](course) an elective course?
+    - Is [Advanced Machine Learning](course) an elective course?
+    - Is [Autonomous Systems](course) an elective course?
+    - Is [Bio-image Computing](course) an elective course?
+    - Is [Complexity Theory](course) an elective course?
+    - Is [Computer Graphics](course) an elective course?
+    - Is [Computer Vision](course) an elective course?
+    - Is [Cryptography](course) an elective course?
+    - Is [Distributed Database Systems](course) an elective course?
+    - Is [Edge and Fog Computing](course) an elective course?
+    - Is [Embedded Systems](course) an elective course?
+    - Is [Ethics, Policy, Law and Regulations in AI](course) an elective course?
+    - Is [Fundamentals of Machine Learning](course) an elective course?
+    - Is [Graph-theoretic Algorithms](course) an elective course?
+    - Is [Hardware Software Co-design](course) an elective course?
+    - Is [Introduction to AR and VR](course) an elective course?
+    - Is [Introduction to Blockchain](course) an elective course?
+    - Is [Medical Image Analysis](course) an elective course?
+    - Is [Mobile and Pervasive Computing](course) an elective course?
+    - Is [Natural Language Understanding](course) an elective course?
+    - Is [Parameterized Complexity](course) an elective course?
+    - Is [Principles of Biological Vision and Applications](course) an elective course?
+    - Is [Security and Its Applications](course) an elective course?
+    - Is [Software Testing and Quality Assurance](course) an elective course?
+    - Is [Virtualization and Cloud Computing](course) an elective course?
+    - What type of course is [Artificial Intelligence](course)?
+    - Is [Database Systems](course) an elective?
+    - Can you tell me the course type for [Computer Networks](course)?
+    - What is the course classification of [Software Engineering](course)?
+    - Is [Data Structures](course) a core course?
+    - What category does [Operating Systems](course) fall under?
+    - Is [Algorithms](course) a required course?
+    - Can you tell me the course type for [Machine Learning](course)?
+    - Is [Web Development](course) an optional course?
+    - What is the classification of [Database Management](course)?
+    - Is [Network Security](course) a specialization course?
+    - Can you tell me if [Computer Graphics](course) is a practical course?
+    - Is [Parallel Computing](course) a theory-based course?
+    - What type of course is [Artificial Neural Networks](course)?
+
+- intent: inquire_course_professors
+  examples: |
+    - Who teaches [Introduction to Computer Science](course)?
+    - Who teaches [Artificial Intelligence](course)?
+
+    - Who teaches [Database Management System](course)?
+    - Who teaches [Database Systems](course)?
+    - Who teaches [Introduction to Computer Science](course)?
+    - Who teaches [Data Structures and Algorithms](course)?
+    - Who teaches [Design and Analysis of Algorithms](course)?
+    - Who teaches [Human-Machine Interaction](course)?
+    - Who teaches [Maths for Computing](course)?
+    - Who teaches [Pattern Recognition and Machine Learning](course)?
+    - Who teaches [Principles of Computer Systems - I](course)?
+    - Who teaches [Software Engineering](course)?
+    - Who teaches [Computer Architecture](course)?
+    - Who teaches [Computer Networks](course)?
+    - Who teaches [Data Engineering](course)?
+    - Who teaches [Operating Systems](course)?
+    - Who teaches [Data Visualization (400)](course)?
+    - Who teaches [Distributed Systems](course)?
+    - Who teaches [DL-Ops](course)?
+    - Who teaches [Software and Data Engineering](course)?
+    - Who teaches [Advanced Artificial Intelligence](course)?
+    - Who teaches [Advanced Biometrics](course)?
+    - Who teaches [Principles of Computer Systems - II](course)?
+    - Who teaches [Principles of Programming Languages](course)?
+    - Who teaches [Optimization in ML](course)?
+    - Who teaches [Visual Computing Lab](course)?
+    - Who teaches [Advanced Data Structure and Algorithms](course)?
+    - Who teaches [Dependable AI](course)?
+    - Who teaches [ML-Ops](course)?
+    - Who teaches [Advanced Machine Learning](course)?
+    - Who teaches [Autonomous Systems](course)?
+    - Who teaches [Bio-image Computing](course)?
+    - Who teaches [Complexity Theory](course)?
+    - Who teaches [Computer Graphics](course)?
+    - Who teaches [Computer Vision](course)?
+    - Who teaches [Cryptography](course)?
+    - Who teaches [Distributed Database Systems](course)?
+    - Who teaches [Edge and Fog Computing](course)?
+    - Who teaches [Embedded Systems](course)?
+    - Who teaches [Ethics, Policy, Law and Regulations in AI](course)?
+    - Who teaches [Fundamentals of Machine Learning](course)?
+    - Who teaches [Graph-theoretic Algorithms](course)?
+    - Who teaches [Hardware Software Co-design](course)?
+    - Who teaches [Introduction to AR and VR](course)?
+    - Who teaches [Introduction to Blockchain](course)?
+    - Who teaches [Medical Image Analysis](course)?
+    - Who teaches [Mobile and Pervasive Computing](course)?
+    - Who teaches [Natural Language Understanding](course)?
+    - Who teaches [Parameterized Complexity](course)?
+    - Who teaches [Principles of Biological Vision and Applications](course)?
+    - Who teaches [Security and Its Applications](course)?
+    - Who teaches [Software Testing and Quality Assurance](course)?
+    - Who teaches [Virtualization and Cloud Computing](course)?
+    - Who teaches [Selected Topics in Artificial Intelligence - I](course)?
+    - Can you tell me the professors teaching [Software Engineering](course)?
+    - Which professors are responsible for [Algorithms and Data Structures](course)?
+    - Who is the instructor for [Web Development](course)?
+    - Who teaches [Machine Learning](course)?
+    - Can you tell me the professors teaching [Database Management](course)?
+    - Which professors are responsible for [Computer Networks](course)?
+    - Who is the instructor for [Data Mining](course)?
+    - Who teaches [Artificial Intelligence](course)?
+    - Can you tell me the professors teaching [Computer Vision](course)?
+    - Which professors are responsible for [Natural Language Processing](course)?
+    - Who is the instructor for [Information Retrieval](course)?
+    - Who teaches [CSL1010](coursecode)?
+    - Can you tell me the professors teaching [CSL2020](coursecode)?
+    - Which professors are responsible for [CSL2030](coursecode)?
+    - Who is the instructor for [CSL2030](coursecode)?
+    - Tell me the professors teaching [CSL1010](coursecode).
+    - Can you provide the names of the instructors for [CSL2020](coursecode)?
+    - Who are the professors responsible for [CSL2030](coursecode)?
+    - Provide me with the instructor details for [CSL2030](coursecode).
+    - Can you tell me who teaches [CSL1010](coursecode)?
+    - I'm interested in knowing the professors for [CSL2020](coursecode).
+    - Who is assigned as the instructor for [CSL2030](coursecode)?
+    - Give me information about the professors teaching [CSL1010](coursecode).
+    - Can you provide the professors' names for [CSL2020](coursecode)?
+    - Tell me which professors are responsible for [CSL2030](coursecode).
+    - Who should I contact regarding [CSL2030](coursecode)?
+
+- intent: inquire_about_professor
+  examples: |
+    - Can you give me information about Professor [Smith](professor)?
+    - Can you give me information about Professor [Anand Mishra](professor)?
+    - Can you give me information about Professor [Debasis Das](professor)?
+    - Can you give me information about Professor [Dip Sankar Banerjee](professor)?
+    - Can you give me information about Professor [Kshitij Gajjar](professor)?
+    - Can you give me information about Professor [Mayank Vatsa](professor)?
+    - Can you give me information about Professor [Pallavi Jain](professor)?
+    - Can you give me information about Professor [Richa Singh](professor)?
+    - Can you give me information about Professor [Santanu Chaudhury](professor)?
+    - Can you give me information about Professor [Suchetana Chakraborty](professor)?
+    - Can you give me information about Professor [Sumit Kalra](professor)?
+    - Can you give me information about Professor [Yashaswi Verma](professor)?
+    - Can you give me information about Professor [Angshuman Paul](professor)?
+    - Can you give me information about Professor [Deepak Mishra](professor)?
+    - Can you give me information about Professor [Gaurav Harit](professor)?
+    - Can you give me information about Professor [Lawqueen Kanesh](professor)?
+    - Can you give me information about Professor [Palash Das](professor)?
+    - Can you give me information about Professor [Pratik Mazumder](professor)?
+    - Can you give me information about Professor [Romi Banerjee](professor)?
+    - Can you give me information about Professor [Somitra Sanadhya](professor)?
+    - Can you give me information about Professor [Suman Kundu](professor)?
+    - Can you give me information about Professor [Vimal Raj Sharma](professor)?
+    - Can you give me information about Professor [Bharat Giddwani](professor)?
+    - Can you give me information about Professor [Lipika Dey](professor)?
+    - Can you give me information about Professor [Ravi Bhandari](professor)?
+    - Can you give me information about Professor [Ram Subramanium](professor)?
+    - Can you give me information about Professor [C Pandu Rangan](professor)?
+    - Can you give me information about Professor [Monika Gupta](professor)?
+    - Can you give me information about Professor [Tejas Dhamecha](professor)?
+    - Can you give me information about Professor [Aloknath De](professor)?
+    - Can you give me information about Professor [Nalini Ratha](professor)?
+    - Can you give me information about Professor [Saket Saurabh](professor)?
+    - Can you give me information about Professor [Venkataraman Balaji](professor)?
+    - Can you give me information about Professor [Hiranmay Ghosh](professor)?
+    - Can you give me information about Professor [Sajal K. Das](professor)?
+    - Can you give me information about Professor [Sameep Mehta](professor)?
+    - Can you give me information about Professor [Bimal Roy](professor)?
+    - Can you give me information about Professor [Gargi Banerjee Dasgupta](professor)?
+    - Can you give me information about Professor [Naveen Garg](professor)?
+    - Can you give me information about Professor [Shivkumar Kalyanaraman](professor)?
+    - Can you give me information about Professor [Chiranjib Bhattacharya](professor)?
+    - Can you give me information about Professor [Gautam Shroff](professor)?
+    - Can you give me information about Professor [Sartaj Sahni](professor)?
+    - Can you give me information about Professor [Venu Govindaraju](professor)?
+    - Tell me about Professor [Johnson](professor).
+    - What are the qualifications of Professor [Williams](professor)?
+    - Can you provide some details about Professor [Davis](professor)?
+    - Who is Professor [Anderson](professor)?
+    - Tell me about the background of Professor [Wilson](professor).
+    - Can you provide information about Professor [Taylor](professor)'s expertise?
+    - Who is Professor [Brown](professor) and what are their research interests?
+    - Tell me about the experience of Professor [Miller](professor).
+    - Can you provide details about Professor [Clark](professor)'s publications?
+    - Who is Professor [Lewis](professor) and what courses do they teach?
+    - Tell me about the professional achievements of Professor [Harris](professor).
+    - Can you provide information about Professor [Jackson](professor)'s areas of specialization?
+    - Who is Professor [Martin](professor) and what is their teaching philosophy?
+    - Tell me about the research contributions of Professor [Moore](professor).
+
+- intent: inquire_professor_education
+  examples: |
+    - Where did Professor [Smith](professor) complete their PhD?
+    - Where did Professor [Anand Mishra](professor) complete their PhD?
+    - Where did Professor [Debasis Das](professor) complete their PhD?
+    - Where did Professor [Dip Sankar Banerjee](professor) complete their PhD?
+    - Where did Professor [Kshitij Gajjar](professor) complete their PhD?
+    - Where did Professor [Mayank Vatsa](professor) complete their PhD?
+    - Where did Professor [Pallavi Jain](professor) complete their PhD?
+    - Where did Professor [Richa Singh](professor) complete their PhD?
+    - Where did Professor [Santanu Chaudhury](professor) complete their PhD?
+    - Where did Professor [Suchetana Chakraborty](professor) complete their PhD?
+    - Where did Professor [Sumit Kalra](professor) complete their PhD?
+    - Where did Professor [Yashaswi Verma](professor) complete their PhD?
+    - Where did Professor [Angshuman Paul](professor) complete their PhD?
+    - Where did Professor [Deepak Mishra](professor) complete their PhD?
+    - Where did Professor [Gaurav Harit](professor) complete their PhD?
+    - Where did Professor [Lawqueen Kanesh](professor) complete their PhD?
+    - Where did Professor [Palash Das](professor) complete their PhD?
+    - Where did Professor [Pratik Mazumder](professor) complete their PhD?
+    - Where did Professor [Romi Banerjee](professor) complete their PhD?
+    - Where did Professor [Somitra Sanadhya](professor) complete their PhD?
+    - Where did Professor [Suman Kundu](professor) complete their PhD?
+    - Where did Professor [Vimal Raj Sharma](professor) complete their PhD?
+    - Where did Professor [Bharat Giddwani](professor) complete their PhD?
+    - Where did Professor [Lipika Dey](professor) complete their PhD?
+    - Where did Professor [Ravi Bhandari](professor) complete their PhD?
+    - Where did Professor [Ram Subramanium](professor) complete their PhD?
+    - Where did Professor [C Pandu Rangan](professor) complete their PhD?
+    - Where did Professor [Monika Gupta](professor) complete their PhD?
+    - Where did Professor [Tejas Dhamecha](professor) complete their PhD?
+    - Where did Professor [Aloknath De](professor) complete their PhD?
+    - Where did Professor [Nalini Ratha](professor) complete their PhD?
+    - Where did Professor [Saket Saurabh](professor) complete their PhD?
+    - Where did Professor [Venkataraman Balaji](professor) complete their PhD?
+    - Where did Professor [Hiranmay Ghosh](professor) complete their PhD?
+    - Where did Professor [Sajal K. Das](professor) complete their PhD?
+    - Where did Professor [Sameep Mehta](professor) complete their PhD?
+    - Where did Professor [Bimal Roy](professor) complete their PhD?
+    - Where did Professor [Gargi Banerjee Dasgupta](professor) complete their PhD?
+    - Where did Professor [Naveen Garg](professor) complete their PhD?
+    - Where did Professor [Shivkumar Kalyanaraman](professor) complete their PhD?
+    - Where did Professor [Chiranjib Bhattacharya](professor) complete their PhD?
+    - Where did Professor [Gautam Shroff](professor) complete their PhD?
+    - Where did Professor [Sartaj Sahni](professor) complete their PhD?
+    - Where did Professor [Venu Govindaraju](professor) complete their PhD?
+    - Can you tell me the institution where Professor [Johnson](professor) earned their PhD?
+    - What is the PhD institution of Professor [Williams](professor)?
+    - Can you provide the name of the university where Professor [Davis](professor) obtained their PhD?
+    - Where did Professor [Anderson](professor) receive their doctoral degree?
+    - Can you tell me the alma mater of Professor [Wilson](professor) for their PhD?
+    - What university awarded the PhD of Professor [Taylor](professor)?
+    - Can you provide the name of the institution where Professor [Brown](professor) completed their doctoral studies?
+    - Where did Professor [Miller](professor) pursue their PhD?
+    - Can you tell me the university where Professor [Clark](professor) obtained their doctoral degree?
+    - What is the PhD-granting institution of Professor [Lewis](professor)?
+    - Can you provide the name of the university where Professor [Harris](professor) completed their PhD?
+    - Where did Professor [Jackson](professor) earn their doctoral degree?
+    - Can you tell me the institution where Professor [Martin](professor) received their PhD?
+    - What is the PhD institution of Professor [Moore](professor)?
+
+- intent: inquire_professor_research_area
+  examples: |
+    - What are Professor [Smith](professor)'s research interests?
+    - What are Professor [Anand Mishra](professor)'s research interests?
+    - What are Professor [Debasis Das](professor)'s research interests?
+    - What are Professor [Dip Sankar Banerjee](professor)'s research interests?
+    - What are Professor [Kshitij Gajjar](professor)'s research interests?
+    - What are Professor [Mayank Vatsa](professor)'s research interests?
+    - What are Professor [Pallavi Jain](professor)'s research interests?
+    - What are Professor [Richa Singh](professor)'s research interests?
+    - What are Professor [Santanu Chaudhury](professor)'s research interests?
+    - What are Professor [Suchetana Chakraborty](professor)'s research interests?
+    - What are Professor [Sumit Kalra](professor)'s research interests?
+    - What are Professor [Yashaswi Verma](professor)'s research interests?
+    - What are Professor [Angshuman Paul](professor)'s research interests?
+    - What are Professor [Deepak Mishra](professor)'s research interests?
+    - What are Professor [Gaurav Harit](professor)'s research interests?
+    - What are Professor [Lawqueen Kanesh](professor)'s research interests?
+    - What are Professor [Palash Das](professor)'s research interests?
+    - What are Professor [Pratik Mazumder](professor)'s research interests?
+    - What are Professor [Romi Banerjee](professor)'s research interests?
+    - What are Professor [Somitra Sanadhya](professor)'s research interests?
+    - What are Professor [Suman Kundu](professor)'s research interests?
+    - What are Professor [Vimal Raj Sharma](professor)'s research interests?
+    - What are Professor [Bharat Giddwani](professor)'s research interests?
+    - What are Professor [Lipika Dey](professor)'s research interests?
+    - What are Professor [Ravi Bhandari](professor)'s research interests?
+    - What are Professor [Ram Subramanium](professor)'s research interests?
+    - What are Professor [C Pandu Rangan](professor)'s research interests?
+    - What are Professor [Monika Gupta](professor)'s research interests?
+    - What are Professor [Tejas Dhamecha](professor)'s research interests?
+    - What are Professor [Aloknath De](professor)'s research interests?
+    - What are Professor [Nalini Ratha](professor)'s research interests?
+    - What are Professor [Saket Saurabh](professor)'s research interests?
+    - What are Professor [Venkataraman Balaji](professor)'s research interests?
+    - What are Professor [Hiranmay Ghosh](professor)'s research interests?
+    - What are Professor [Sajal K. Das](professor)'s research interests?
+    - What are Professor [Sameep Mehta](professor)'s research interests?
+    - What are Professor [Bimal Roy](professor)'s research interests?
+    - What are Professor [Gargi Banerjee Dasgupta](professor)'s research interests?
+    - What are Professor [Naveen Garg](professor)'s research interests?
+    - What are Professor [Shivkumar Kalyanaraman](professor)'s research interests?
+    - What are Professor [Chiranjib Bhattacharya](professor)'s research interests?
+    - What are Professor [Gautam Shroff](professor)'s research interests?
+    - What are Professor [Sartaj Sahni](professor)'s research interests?
+    - What are Professor [Venu Govindaraju](professor)'s research interests?
+    - Can you tell me about the research areas of Professor [Johnson](professor)?
+    - What is Professor [Williams](professor) currently researching?
+    - Can you provide information about the research focus of Professor [Davis](professor)?
+    - What are the main research interests of Professor [Anderson](professor)?
+    - Can you tell me about the research areas explored by Professor [Wilson](professor)?
+    - What is the current research focus of Professor [Taylor](professor)?
+    - Can you provide information about the research interests of Professor [Brown](professor)?
+    - What are the specialized research areas of Professor [Miller](professor)?
+    - Can you tell me about the ongoing research projects of Professor [Clark](professor)?
+    - What is the research focus of Professor [Lewis](professor)?
+    - Can you provide information about the recent research contributions of Professor [Harris](professor)?
+    - What are the specific research areas of Professor [Jackson](professor)?
+    - Can you tell me about the research focus of Professor [Martin](professor)?
+    - What are the research interests of Professor [Moore](professor)?
+
+- intent: programs
+  examples: |
+    - What are the [programs](program) offered by the institute?
+    - Can you provide information about the available degree [programs](program)?
+    - What are the different study [programs](program) at the institute?
+    - Which [programs](program) can I enroll in?
+    - Tell me about the study [programs](program) offered by the university.
+    - Can you provide information about the available [programs](program) of study?
+    - What are the degree [programs](program) provided by the college?
+    - Which study [programs](program) are available for undergraduate students?
+    - Can you tell me about the graduate [programs](program) offered by the institution?
+    - What are the professional development [programs](program) available at the school?
+    - Which [programs](program) can international students apply for?
+    - Can you provide information about the research-oriented [programs](program) offered?
+    - What are the part-time study [programs](program) at the university?
+    - Which [programs](program) have internship opportunities?
+    - Can you tell me about the online education [programs](program) offered?
+
+- intent: department_info
+  examples: |
+    - Tell me about the [Computer Science and Engeneering](department) department.
+    - What are the research areas in the [computer science](department) department?
+    - Can you provide information about the faculty in the [computer science](department) department?
+    - What are the courses offered by the [computer science](department) department?
+    - Tell me about the research projects in the [computer science](department) department.
+    - Can you provide details about the facilities in the [computer science](department) department?
+    - What are the admission requirements for the [computer science](department) department?
+    - Tell me about the achievements of the [computer science](department) department.
+    - Can you provide information about the collaborations of the [computer science](department) department?
+    - What are the career prospects for students in the [computer science](department) department?
+    - Tell me about the faculty members' expertise in the [computer science](department) department.
+    - Can you provide information about the alumni network of the [computer science](department) department?
+    - What are the current initiatives of the [computer science](department) department?
+    - Tell me about the student organizations affiliated with the [computer science](department) department.
+    - Can you provide details about the internships and industry connections of the [computer science](department) department?
+
+- intent: ongoing_projects
+  examples: |
+    - What are the ongoing [projects](projects) in the [computer science](department) department?
+    - Can you tell me about the current research [projects](projects)?
+    - What [projects](projects) are currently being worked on?
+    - Can you provide information about the ongoing research [activities](projects)?
+    - Tell me about the active [projects](projects) in the [computer science](department) department.
+    - Can you provide updates on the ongoing research [projects](projects)?
+    - What are the recent developments in the ongoing [projects](projects) in the [computer science](department) department?
+    - Can you tell me about the collaborations involved in the ongoing research [projects](projects)?
+    - What are the specific focus areas of the ongoing research [projects](projects) in the [computer science](department) department?
+    - Tell me about the funding sources for the ongoing research [projects](projects) in the [computer science](department) department.
+    - Can you provide details about the research teams working on the ongoing [projects](projects)?
+    - What are the expected outcomes of the ongoing research [projects](projects) in the [computer science](department) department?
+    - Tell me about the impact of the ongoing research [projects](projects) in the [computer science](department) department.
+    - Can you provide information about the publications resulting from the ongoing research [projects](projects)?
+    - What are the future directions for the ongoing research [projects](projects) in the [computer science](department) department?
+
+
+- synonym: deep learning
+  examples: |
+    - deep neural networks
+    - deep AI
+    = DL
+
+- synonym: machine learning
+  examples: |
+    - ML
+    - Machine Learning
+
+
+
+- synonym: artificial intelligence
+  examples: |
+    - AI
+    - machine intelligence
+    - Artificial Intelligence
+
+- synonym: Database Systems
+  examples: |
+    - DBMS
+    - database administration
+    - dbms
+
+
+
+- synonym: Introduction to Computer Science
+  examples: |
+    - ICS
+    - Ics
+    - introductory to CS
+
+- synonym: Data Structures and Algorithms
+  examples: |
+    - DSA
+    - dsa
+    - data structure and algorithm
+    - algorithms and data structures
+
+- synonym: Design and Analysis of Algorithms
+  examples: |
+    - DAA
+    - design and analysis of algorithms
+    - algorithm analysis
+    - algorithm design
+
+- synonym: Human-Machine Interaction
+  examples: |
+    - HMI
+    - user interface design
+    - human machine interaction
+    - Human machine interaction
+
+- synonym: Maths for Computing
+  examples: |
+    - maths for computing
+    - math for computing
+    - mathematical foundations
+    - computational mathematics
+
+- synonym: Computer Science and Engineering
+  examples: |
+    - CSE
+    - cse
+    - CS
+    - computer engineering
+    - computer science
+    - computer
+
+- synonym: Pattern Recognition and Machine Learning
+  examples: |
+    - PRML
+    - prml
+    - Pattern Recognition and ML
+    - pattern recognition and ML
+    - pattern recognition and machine learning
+    - pattern recognition
+    - machine learning
+
+- synonym: Principles of Computer Systems - I
+  examples: |
+    - computer systems
+    - pattern of computer systems
+    - patten of computer system
+    - computer architecture
+
+- synonym: Software Engineering
+  examples: |
+    - SE
+    - software development
+    - software design
+    - software engineering
+
+- synonym: Computer Architecture
+  examples: |
+    - computer organization
+    - computer design
+    - computer architecture
+
+- synonym: Computer Networks
+  examples: |
+    - network communication
+    - network protocols
+    - CN 
+    - computer network
+
+- synonym: Data Engineering
+  examples: |
+    - data management
+    - data processing
+    - data engineering
+
+- synonym: Operating Systems
+  examples: |
+    - OS
+    - system software
+    - operating system
+
+- synonym: Data Visualization (400)
+  examples: |
+    - DV
+    - data visualization
+    - data presentation
+    - visual data analysis
+
+- synonym: Distributed Systems
+  examples: |
+    - distributed computing
+    - distributed system
+
+- synonym: DL-Ops
+  examples: |
+    - deep learning operations
+    - model deployment
+
+- synonym: Software and Data Engineering
+  examples: |
+    - SDE
+    - software and data engineering
+    - software development lifecycle
+
+- synonym: Advanced Artificial Intelligence
+  examples: |
+    - advanced AI
+    - AI algorithms
+    - advanced artificial intelligence
+
+- synonym: Advanced Biometrics
+  examples: |
+    - biometric identification
+    - biometric systems
+    - advanced biometric
+    - advanced biometrics
+
+- synonym: Principles of Computer Systems - II
+  examples: |
+    - advanced computer systems
+    - computer architecture principles
+    - principle of computer system -2
+    - PCS -2
+    - PCS -2
+
+- synonym: Principles of Programming Languages
+  examples: |
+    - programming language design
+    - principles of programming language
+    - language semantics
+    - PPL
+    - ppl
+
+- synonym: Optimization in ML
+  examples: |
+    - ML optimization techniques
+    - model performance improvement
+    - optimization in ML
+
+- synonym: Visual Computing Lab
+  examples: |
+    - visual computing lab
+    - computing lab
+    - computer vision projects
+    - image processing
+
+- synonym: Advanced Data Structure and Algorithms
+  examples: |
+    - advanced DSA
+    - advanced algorithm design
+
+- synonym: Dependable AI
+  examples: |
+    - reliable AI systems
+    - trustworthy AI
+    - dependable AI
+
+- synonym: ML-Ops
+  examples: |
+    - machine learning operations
+    - ML model management
+
+- synonym: Advanced Machine Learning
+  examples: |
+    - advanced ML algorithms
+    - advanced ML
+    - ML model optimization
+
+- synonym: Autonomous Systems
+  examples: |
+    - self-driving systems
+    - autonomous systems
+
+
+- synonym: Bio-image Computing
+  examples: |
+    - medical image analysis
+    - image processing in biology
+    - bio image processing
+    - bio-image processing
+
+- synonym: Complexity Theory
+  examples: |
+    - computational complexity
+    - algorithm complexity analysis
+    - complexity theory
+
+- synonym: Computer Graphics
+  examples: |
+    - graphical rendering
+    - 3D modeling
+    - computer graphics
+
+- synonym: Computer Vision
+  examples: |
+    - visual perception
+    - image recognition
+    - computer vision
+
+- synonym: Cryptography
+  examples: |
+    - crypto
+    - secure communication
+    - encryption techniques
+
+- synonym: Distributed Database Systems
+  examples: |
+    - distributed data management
+    - distributed database system
+    
+
+- synonym: Edge and Fog Computing
+  examples: |
+    - edge and fog computing
+    - edge computing platforms
+    - fog computing architectures
+
+- synonym: Embedded Systems
+  examples: |
+    - embedded system
+    - embedded device programming
+    - real-time systems
+
+- synonym: Ethics, Policy, Law and Regulations in AI
+  examples: |
+    - AI ethics
+    - legal aspects of AI
+
+- synonym: Fundamentals of Machine Learning
+  examples: |
+    - basic ML concepts
+    - ML algorithms introduction
+    - fundamentals of ML
+
+- synonym: Graph-theoretic Algorithms
+  examples: |
+    - graph algorithms
+    - network analysis
+
+- synonym: Hardware Software Co-design
+  examples: |
+    - hardware software integration
+    - system-on-chip design
+    - hardware software Co-design
+
+- synonym: Introduction to AR and VR
+  examples: |
+    - AR/VR fundamentals
+    - augmented reality basics
+    - intro to AR and VR
+
+- synonym: Introduction to Blockchain
+  examples: |
+    - blockchain technology overview
+    - decentralized systems
+    - intro to blockchain
+
+- synonym: Medical Image Analysis
+  examples: |
+    - medical imaging techniques
+    - diagnostic image processing
+
+- synonym: Mobile and Pervasive Computing
+  examples: |
+    - mobile application development
+    - ubiquitous computing
+
+- synonym: Natural Language Understanding
+  examples: |
+    - NLU
+    - nlu
+    - NLU algorithms
+    - language processing
+
+- synonym: Parameterized Complexity
+  examples: |
+    - complexity analysis techniques
+    - parameterized problem solving
+    - parameter complexity
+
+- synonym: Principles of Biological Vision and Applications
+  examples: |
+    - biological visual systems
+    - vision applications in biology
+    - principle of biological vision
+
+- synonym: Security and Its Applications
+  examples: |
+    - cybersecurity principles
+    - security protocols
+    - security and its application
+
+- synonym: Software Testing and Quality Assurance
+  examples: |
+    - software QA
+    - testing methodologies
+    - software testing
+    - quality assurance
+
+- synonym: Virtualization and Cloud Computing
+  examples: |
+    - cloud infrastructure
+    - virtual machine management
+    - visualization 
+    - cloud computing
+
+- synonym: Selected Topics in Artificial Intelligence - I
+  examples: |
+    - AI research topics
+    - advanced AI concepts
+    - selected topics in AI
+    - selected topics in AI - 1
+
+
+- synonym: Anand Mishra
+  examples: |
+    - Dr. Mishra
+    - Professor Mishra
+
+- synonym: Debasis Das
+  examples: |
+    - Dr. Das
+    - Professor Das
+
+- synonym: Dip Sankar Banerjee
+  examples: |
+    - Dr. Banerjee
+    - Professor Banerjee
+
+- synonym: Kshitij Gajjar
+  examples: |
+    - Dr. Gajjar
+    - Professor Gajjar
+
+- synonym: Mayank Vatsa
+  examples: |
+    - Dr. Vatsa
+    - Professor Vatsa
+
+- synonym: Pallavi Jain
+  examples: |
+    - Dr. Jain
+    - Professor Jain
+
+- synonym: Richa Singh
+  examples: |
+    - Dr. Singh
+    - Professor Singh
+
+- synonym: Santanu Chaudhury
+  examples: |
+    - Dr. Chaudhury
+    - Professor Chaudhury
+
+- synonym: Suchetana Chakraborty
+  examples: |
+    - Dr. Chakraborty
+    - Professor Chakraborty
+
+- synonym: Sumit Kalra
+  examples: |
+    - Dr. Kalra
+    - Professor Kalra
+
+- synonym: Yashaswi Verma
+  examples: |
+    - Dr. Verma
+    - Professor Verma
+
+- synonym: Angshuman Paul
+  examples: |
+    - Dr. Paul
+    - Professor Paul
+
+- synonym: Deepak Mishra
+  examples: |
+    - Dr. Mishra
+    - Professor Mishra
+
+- synonym: Gaurav Harit
+  examples: |
+    - Dr. Harit
+    - Professor Harit
+
+- synonym: Lawqueen Kanesh
+  examples: |
+    - Dr. Kanesh
+    - Professor Kanesh
+
+- synonym: Palash Das
+  examples: |
+    - Dr. Das
+    - Professor Das
+
+- synonym: Pratik Mazumder
+  examples: |
+    - Dr. Mazumder
+    - Professor Mazumder
+
+- synonym: Romi Banerjee
+  examples: |
+    - Dr. Banerjee
+    - Professor Banerjee
+
+- synonym: Somitra Sanadhya
+  examples: |
+    - Dr. Sanadhya
+    - Professor Sanadhya
+
+- synonym: Suman Kundu
+  examples: |
+    - Dr. Kundu
+    - Professor Kundu
+
+- synonym: Vimal Raj Sharma
+  examples: |
+    - Dr. Sharma
+    - Professor Sharma
+
+- synonym: Bharat Giddwani
+  examples: |
+    - Dr. Giddwani
+    - Professor Giddwani
+
+- synonym: Lipika Dey
+  examples: |
+    - Dr. Dey
+    - Professor Dey
+
+- synonym: Ravi Bhandari
+  examples: |
+    - Dr. Bhandari
+    - Professor Bhandari
+
+- synonym: Ram Subramanium
+  examples: |
+    - Dr. Subramanium
+    - Professor Subramanium
+
+- synonym: C Pandu Rangan
+  examples: |
+    - Dr. Rangan
+    - Professor Rangan
+
+- synonym: Monika Gupta
+  examples: |
+    - Dr. Gupta
+    - Professor Gupta
+
+- synonym: Tejas Dhamecha
+  examples: |
+    - Dr. Dhamecha
+    - Professor Dhamecha
+
+- synonym: Aloknath De
+  examples: |
+    - Dr. De
+    - Professor De
+
+- synonym: Nalini Ratha
+  examples: |
+    - Dr. Ratha
+    - Professor Ratha
+
+- synonym: Saket Saurabh
+  examples: |
+    - Dr. Saurabh
+    - Professor Saurabh
+
+- synonym: Venkataraman Balaji
+  examples: |
+    - Dr. Balaji
+    - Professor Balaji
+
+- synonym: Hiranmay Ghosh
+  examples: |
+    - Dr. Ghosh
+    - Professor Ghosh
+
+- synonym: Sajal K. Das
+  examples: |
+    - Dr. Das
+    - Professor Das
+
+- synonym: Sameep Mehta
+  examples: |
+    - Dr. Mehta
+    - Professor Mehta
+
+- synonym: Bimal Roy
+  examples: |
+    - Dr. Roy
+    - Professor Roy
+
+- synonym: Gargi Banerjee Dasgupta
+  examples: |
+    - Dr. Dasgupta
+    - Professor Dasgupta
+
+- synonym: Naveen Garg
+  examples: |
+    - Dr. Garg
+    - Professor Garg
+
+- synonym: Shivkumar Kalyanaraman
+  examples: |
+    - Dr. Kalyanaraman
+    - Professor Kalyanaraman
+
+- synonym: Chiranjib Bhattacharya
+  examples: |
+    - Dr. Bhattacharya
+    - Professor Bhattacharya
+
+- synonym: Gautam Shroff
+  examples: |
+    - Dr. Shroff
+    - Professor Shroff
+
+- synonym: Sartaj Sahni
+  examples: |
+    - Dr. Sahni
+    - Professor Sahni
+
+- synonym: Venu Govindaraju
+  examples: |
+    - Dr. Govindaraju
+    - Professor Govindaraju
+
+
+
+# - regex: course
+#   examples: |
+#     - \b(?i:deep\s*learning)\b
+#     - \b(?i:machine\s*learning)\b
+#     - \b(?i:AI)\b
+#     - \b(?i:artificial\s*intelligence)\b
+#     - \b(?i:dbms)\b
+#     - \b(?i:database\s*management\s*system)\b
+#     - \b(?i:database\s*systems)\b
+#     - \b(?i:Introduction\s*to\s*Computer\s*Science)\b
+#     - \b(?i:Data\s*Structures\s*and\s*Algorithms)\b
+#     - \b(?i:Design\s*and\s*Analysis\s*of\s*Algorithms)\b
+#     - \b(?i:Human-Machine\s*Interaction)\b
+#     - \b(?i:Maths\s*for\s*Computing)\b
+#     - \b(?i:Pattern\s*Recognition\s*and\s*Machine\s*Learning)\b
+#     - \b(?i:Principles\s*of\s*Computer\s*Systems\s*-\s*I)\b
+#     - regex: \b(?i:Software\s*Engineering)\b
+#     - regex: \b(?i:Computer\s*Architecture)\b
+#     - regex: \b(?i:Computer\s*Networks)\b
+#     - regex: \b(?i:Data\s*Engineering)\b
+#     - regex: \b(?i:Operating\s*Systems)\b
+#     - regex: \b(?i:Data\s*Visualization\s*\(\d+\))\b
+#     - regex: \b(?i:Distributed\s*Systems)\b
+#     - regex: \b(?i:DL-Ops)\b
+#     - regex: \b(?i:Software\s*and\s*Data\s*Engineering)\b
+#     - regex: \b(?i:Advanced\s*Artificial\s*Intelligence)\b
+#     - regex: \b(?i:Advanced\s*Biometrics)\b
+#     - regex: \b(?i:Principles\s*of\s*Computer\s*Systems\s*-\s*II)\b
+#     - regex: \b(?i:Principles\s*of\s*Programming\s*Languages)\b
+#     - regex: \b(?i:Operating\s*Systems)\b
+#     - regex: \b(?i:Data\s*Visualization\s*\(\d+\))\b
+#     - regex: \b(?i:Optimization\s*in\s*ML)\b
+#     - regex: \b(?i:Distributed\s*Systems)\b
+#     - regex: \b(?i:Visual\s*Computing\s*Lab)\b
+#     - regex: \b(?i:Advanced\s*Data\s*Structure\s*and\s*Algorithms)\b
+#     - regex: \b(?i:Artificial\s*Intelligence)\b
+#     - regex: \b(?i:Computer\s*Architecture)\b
+#     - regex: \b(?i:Dependable\s*AI)\b
+#     - regex: \b(?i:ML-Ops)\b
+#     - regex: \b(?i:Advanced\s*Machine\s*Learning)\b
+#     - regex: \b(?i:Autonomous\s*Systems)\b
+#     - regex: \b(?i:Bio-image\s*Computing)\b
+#     - regex: \b(?i:Complexity\s*Theory)\b
+#     - regex: \b(?i:Computer\s*Graphics)\b
+#     - regex: \b(?i:Computer\s*Vision)\b
+#     - regex: \b(?i:Cryptography)\b
+#     - regex: \b(?i:Distributed\s*Database\s*Systems)\b
+#     - regex: \b(?i:Edge\s*and\s*Fog\s*Computing)\b
+#     - regex: \b(?i:Embedded\s*Systems)\b
+#     - regex: \b(?i:Ethics,\s*Policy,\s*Law\s*and\s*Regulations\s*in\s*AI)\b
+#     - regex: \b(?i:Fundamentals\s*of\s*Machine\s*Learning)\b
+#     - regex: \b(?i:Graph-theoretic\s*Algorithms)\b
+#     - regex: \b(?i:Hardware\s*Software\s*Co-design)\b
+#     - regex: \b(?i:Introduction\s*to\s*AR\s*and\s*VR)\b
+#     - regex: \b(?i:Introduction\s*to\s*Blockchain)\b
+#     - regex: \b(?i:Medical\s*Image\s*Analysis)\b
+#     - regex: \b(?i:Mobile\s*and\s*Pervasive\s*Computing)\b
+#     - regex: \b(?i:Natural\s*Language\s*Understanding)\b
+#     - regex: \b(?i:Parameterized\s*Complexity)\b
+#     - regex: \b(?i:Principles\s*of\s*Biological\s*Vision\s*and\s*Applications)\b
+#     - regex: \b(?i:Security\s*and\s*Its\s*Applications)\b
+#     - regex: \b(?i:Software\s*Testing\s*and\s*Quality\s*Assurance)\b
+#     - regex: \b(?i:Virtualization\s*and\s*Cloud\s*Computing)\b
+#     - regex: \b(?i:Selected\s*Topics\s*in\s*Artificial\s*Intelligence\s*-\s
+#     # - deep learning
+#     # - machine learning
+#     # - AI
+#     # - artificial intelligence
+#     # - dbms
+#     # - database management system
+#     # - database systems
+#     # - Introduction to Computer Science
+#     # - Data Structures and Algorithms
+#     # - Design and Analysis of Algorithms
+#     # - Human-Machine Interaction
+#     # - Maths for Computing
+#     # - Pattern Recognition and Machine Learning
+#     # - Principles of Computer Systems - I
+#     # - Software Engineering
+#     # - Computer Architecture
+#     # - Computer Networks
+#     # - Data Engineering
+#     # - Operating Systems
+#     # - Data Visualization (400)
+#     # - Distributed Systems
+#     # - Computer Architecture
+#     # - DL-Ops
+#     # - Software and Data Engineering
+#     # - Advanced Artificial Intelligence
+#     # - Advanced Biometrics
+#     # - Principles of Computer Systems - II
+#     # - Principles of Programming Languages
+#     # - Operating Systems
+#     # - Data Visualization (400)
+#     # - Optimization in ML
+#     # - Distributed Systems
+#     # - Visual Computing Lab
+#     # - Advanced Data Structure and Algorithms
+#     # - Artificial Intelligence
+#     # - Computer Architecture
+#     # - Dependable AI
+#     # - ML-Ops
+#     # - Advanced Machine Learning
+#     # - Autonomous Systems
+#     # - Bio-image Computing
+#     # - Complexity Theory
+#     # - Computer Graphics
+#     # - Computer Vision
+#     # - Cryptography
+#     # - Distributed Database Systems
+#     # - Edge and Fog Computing
+#     # - Embedded Systems
+#     # - Ethics, Policy, Law and Regulations in AI
+#     # - Fundamentals of Machine Learning
+#     # - Graph-theoretic Algorithms
+#     # - Hardware Software Co-design
+#     # - Introduction to AR and VR
+#     # - Introduction to Blockchain
+#     # - Medical Image Analysis
+#     # - Mobile and Pervasive Computing
+#     # - Natural Language Understanding
+#     # - Parameterized Complexity
+#     # - Principles of Biological Vision and Applications
+#     # - Security and Its Applications
+#     # - Software Testing and Quality Assurance
+#     # - Virtualization and Cloud Computing
+#     # - Selected Topics in Artificial Intelligence - I
+
+
+
+
+entities:
+  - course
+  - coursecode
+  - professor
+  - projects
+  - department
+  - program
+
+
+  
+    
+#   # - regex: professor
+#   #   examples: |
+#   #     - Anand Mishra
+#   #     - Anand Mishra
+#   #     - Debasis Das
+#   #     - Dip Sankar Banerjee
+#   #     - Kshitij Gajjar
+#   #     - Mayank Vatsa
+#   #     - Pallavi Jain
+#   #     - Richa Singh
+#   #     - Santanu Chaudhury
+#   #     - Suchetana Chakraborty
+#   #     - Sumit Kalra
+#   #     - Yashaswi Verma
+#   #     - Angshuman Paul
+#   #     - Deepak Mishra
+#   #     - Gaurav Harit
+#   #     - Lawqueen Kanesh
+#   #     - Palash Das
+#   #     - Pratik Mazumder
+#   #     - Romi Banerjee
+#   #     - Somitra Sanadhya
+#   #     - Suman Kundu
+#   #     - Vimal Raj Sharma
+#   #     - Bharat Giddwani
+#   #     - Lipika Dey
+#   #     - Ravi Bhandari
+#   #     - Ram Subramanium
+#   #     -  C Pandu Rangan
+  #     - Monika Gupta
+  #     - Tejas Dhamecha
+  #     - Aloknath De 
+  #     - Nalini Ratha
+  #     - Saket Saurabh
+  #     - Venkataraman Balaji
+  #     - Hiranmay Ghosh
+  #     - Sajal K. Das
+  #     - Sameep Mehta
+  #     - Bimal Roy
+  #     - Gargi Banerjee Dasgupta
+  #     - Naveen Garg
+  #     - Shivkumar Kalyanaraman
+  #     - Chiranjib Bhattacharya
+  #     - Gautam Shroff
+  #     - Sartaj Sahni
+  #     - Venu Govindaraju
+ 

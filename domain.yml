@@ -1,0 +1,284 @@
+version: "3.1"
+
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - inquire_courses_offered
+  - inquire_course_code
+  - course_prerequisites
+  - course_offered_for
+  - course_credit
+  - course_type
+  - inquire_course_info
+  - inquire_course_professors
+  - inquire_about_professor
+  - inquire_professor_education
+  - inquire_professor_research_area
+  - programs
+  - department_info
+  - ongoing_projects
+  - fallback
+  - out_of_scope
+
+
+entities:
+  - course
+  - coursecode
+  - program
+  - professor
+  - projects
+  - department
+
+
+slots:
+  course:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: course
+
+  coursecode:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: coursecode
+
+  program:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: program
+
+  professor:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: professor
+
+  department:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: department
+
+
+responses:
+
+
+  utter_affirm:
+    - text: "Yes, certainly."
+
+  utter_deny:
+    - text: "No, I don't think so."
+
+  utter_thanks:
+    - text: "You're welcome! I'm here to help."
+
+  utter_express_happiness:
+    - text: "That's wonderful to hear!"
+
+  utter_express_sadness:
+    - text: "I'm sorry to hear that. Is there anything I can do to help?"
+
+  utter_express_excitement:
+    - text: "That sounds very exciting!"
+
+  utter_express_frustration:
+    - text: "I understand. Sometimes things can be frustrating. Is there something specific you're facing difficulty with?"
+
+
+
+  utter_ask_chatbot_name:
+    - text: "You can call me Chatbot. How can I assist you?"
+
+  utter_inquire_chatbot_purpose:
+    - text: "The purpose of this chatbot is to provide information and assist with various queries. Feel free to ask anything!"
+
+  utter_express_gratitude:
+    - text: "You're welcome! I'm glad I could help."
+
+  utter_express_disappointment:
+    - text: "I apologize if I didn't meet your expectations. Let me know how I can improve."
+
+  utter_provide_feedback:
+    - text: "Thank you for your feedback. I'll make a note of it and work on improving."
+
+  utter_request_human_assistance:
+    - text: "I'm here to assist you. If you require human assistance, please let me know and I'll connect you to a human agent."
+
+  utter_inquire_random_fact:
+    - text: "Sure, here's an interesting fact: [INSERT RANDOM FACT]."
+
+  utter_tell_joke:
+    - text: "Sure, here's a joke for you: [INSERT JOKE]."
+
+  utter_inquire_date_time:
+    - text: "The current date and time is [INSERT DATE AND TIME]."
+
+  utter_fallback:
+    - text: "I'm sorry, I didn't understand. Can you please rephrase your question?"
+
+  utter_unlawful_intent:
+    - text: "I'm sorry, but I cannot assist with any unlawful activities. If you have any other questions, feel free to ask."
+
+  utter_disrespectful_intent:
+    - text: "I'm sorry if I've done something to upset you. Please let me know how I can assist you."
+
+  utter_threatening_intent:
+    - text: "I'm sorry if there was a misunderstanding. If you have any concerns or questions, I'm here to help."
+
+  utter_disrespectful_query:
+    - text: "I'm sorry if I've done something to upset you. Please let me know how I can assist you."
+
+  utter_threatening_query:
+    - text: "I'm sorry if there was a misunderstanding. If you have any concerns or questions, I'm here to help."
+
+
+  utter_default:
+    - text: "I'm sorry, I didn't understand. Can you please rephrase your question?"
+
+  utter_out_of_scope:
+    - text: "I'm sorry, but I'm not able to assist with that. My expertise is in a specific domain."
+
+  utter_apology:
+    - text: "I apologize for the confusion. Let me try to assist you with another question."
+
+  utter_help:
+    - text: "I'm here to help you with specific topics. Please ask me a question related to my domain."
+
+  utter_goodbye:
+    - text: "If you have any other questions, feel free to ask. Goodbye!"
+
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_inquire_course_info:
+  - text: "Brief information about the course {course} :"
+
+  utter_inquire_courses_offered:
+  - text: "The {department} department offers the following courses: "
+
+  utter_inquire_course_code:
+  - text: "The course code for {course} is: "
+
+
+
+  utter_course_prerequisites:
+  - text: "The prerequisites for {course} are: "
+
+
+
+  utter_course_offered_for:
+  - text: "The course {course} is offered for the following programs: "
+
+
+
+  utter_course_credit:
+  - text: "The course {course} in the {department} department is worth {credits} credits."
+
+
+  utter_course_type:
+  - text: "The course {course} in the {department} department is a {course_type} course."
+
+
+
+  utter_inquire_course_professors:
+  - text: "The course {course} in the {department} department is taught by the following professors: "
+
+
+
+  utter_inquire_about_professor:
+  - text: "Here is some information about Professor {professor} in the {department} department: "
+
+
+
+  utter_inquire_professor_education:
+  - text: "Professor {professor} in the {department} department completed their PhD from: "
+
+
+
+  utter_inquire_professor_research_area:
+  - text: "Professor {professor} in the {department} department is currently researching in the following areas: "
+
+
+  utter_programs:
+  - text: "The institute offers the following programs: "
+
+
+
+  utter_department_info:
+  - text: "The {department} department is known for: "
+
+
+
+  utter_ongoing_projects:
+  - text: "The ongoing projects in the {department} department are: "
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+actions:
+- action_provide_course_info
+- action_provide_department_info
+- action_provide_professor_info
+- action_provide_project_info
+- action_provide_ongoing_projects
+- action_provide_programs
+- action_provide_professor_research_area
+- action_provide_professor_education
+- action_provide_course_professors
+- action_provide_course_type
+- action_provide_course_structure
+- action_provide_course_offered_for
+- action_provide_course_prerequisites
+- action_provide_course_code
+- action_provide_courses_offered
+- action_greet
+- action_goodbye
+- action_help
+- action_random_fact
+- action_tell_joke
+- action_date_time
+- action_default_fallback
+- action_handle_unlawful_intent
+- action_handle_disrespectful_intent
+- action_handle_threatening_intent
+- action_handle_disrespectful_query
+- action_handle_threatening_query
+
+
+
+
+
+
+

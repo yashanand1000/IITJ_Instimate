@@ -1,0 +1,11 @@
+user: Hi
+Bot: Hey! How are you?
+
+user: what is the course code of Autonomous systems.
+Bot: CSL7650
+
+user: who is the professor of the course Autonomous systems
+Bot: Rajenfra Nagar
+
+user: okay thanks.
+Bot: ok great. Have a nice day!
